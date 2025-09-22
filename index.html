@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabla de posiciones</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Tabla de posiciones</h1>
+
+      <div class="buttons">
+        <button onclick="cargarTabla('2da', this)">2da Categoría</button>
+        <button onclick="cargarTabla('3ra', this)">3ra Categoría</button>
+        <button onclick="cargarTabla('4ta', this)">4ta Categoría</button>
+      </div>
+
+      <div class="card">
+        <table>
+          <thead>
+            <tr>
+              <th class="pos">#</th>
+              <th>Club</th>
+              <th>PJ</th>
+              <th>G</th>
+              <th>P</th>
+            </tr>
+          </thead>
+          <tbody id="tabla-body"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

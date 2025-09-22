@@ -16,7 +16,6 @@ h1 {
   color: #333;
 }
 
-/* Botones */
 .buttons {
   margin-bottom: 20px;
 }
@@ -37,9 +36,10 @@ h1 {
 }
 
 .buttons button.active {
-  background-color: #007bff;
+  background-color: #085a32;
   color: white;
-  border-color: #0056b3;
+  border: 2px solid #085a32;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 .card {
@@ -78,6 +78,11 @@ tr:hover {
   display: flex;
   align-items: center;
   gap: 8px;
+  text-align: left;
+}
+
+td:not(.team) {
+  text-align: center;
 }
 
 .badge {

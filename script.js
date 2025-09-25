@@ -1,44 +1,189 @@
-let data;
+const data = {
+  "4ta": [
+    {
+      pos: 1,
+      equipo: "Club Cipolletti",
+      pj: 4,
+      g: 3,
+      p: 1,
+      escudo: "escudos/CAC.png",
+    },
+    {
+      pos: 1,
+      equipo: "Asociación Española de Neuquén",
+      pj: 4,
+      g: 3,
+      p: 1,
+      escudo: "escudos/AEN.png",
+    },
+    {
+      pos: 3,
+      equipo: "Club Atlético Regina",
+      pj: 4,
+      g: 2,
+      p: 2,
+      escudo: "escudos/CAR.png",
+    },
+    {
+      pos: 3,
+      equipo: "Club Atlético Cinco Saltos",
+      pj: 4,
+      g: 2,
+      p: 2,
+      escudo: "escudos/CACS.png",
+    },
+    {
+      pos: 5,
+      equipo: "Club Pelota Paleta Plottier",
+      pj: 4,
+      g: 1,
+      p: 3,
+      escudo: "escudos/PPP.png",
+    },
+    {
+      pos: 5,
+      equipo: "Club Unión Alem Progresista",
+      pj: 4,
+      g: 1,
+      p: 3,
+      escudo: "escudos/CUAP.png",
+    },
+  ],
+  "3ra": [
+    {
+      pos: 1,
+      equipo: "Club Unión Alem Progresista",
+      pj: 4,
+      g: 4,
+      p: 0,
+      escudo: "escudos/CUAP.png",
+    },
+    {
+      pos: 2,
+      equipo: "Club Pelota Paleta Plottier",
+      pj: 4,
+      g: 3,
+      p: 1,
+      escudo: "escudos/PPP.png",
+    },
+    {
+      pos: 3,
+      equipo: "Club Atlético Cinco Saltos",
+      pj: 4,
+      g: 2,
+      p: 2,
+      escudo: "escudos/CACS.png",
+    },
+    {
+      pos: 3,
+      equipo: "Asociación Española de Neuquén",
+      pj: 4,
+      g: 2,
+      p: 2,
+      escudo: "escudos/AEN.png",
+    },
+    {
+      pos: 5,
+      equipo: "Club Cipolletti",
+      pj: 4,
+      g: 1,
+      p: 3,
+      escudo: "escudos/CAC.png",
+    },
+    {
+      pos: 6,
+      equipo: "Club Atlético Regina",
+      pj: 4,
+      g: 0,
+      p: 0,
+      escudo: "escudos/CAR.png",
+    },
+  ],
+  "2da": [
+    {
+      pos: 1,
+      equipo: "Club Unión Alem Progresista",
+      pj: 4,
+      g: 4,
+      p: 0,
+      escudo: "escudos/CUAP.png",
+    },
+    {
+      pos: 2,
+      equipo: "Club Atlético Cinco Saltos",
+      pj: 4,
+      g: 3,
+      p: 1,
+      escudo: "escudos/CACS.png",
+    },
+    {
+      pos: 3,
+      equipo: "Club Pelota Paleta Plottier",
+      pj: 4,
+      g: 2,
+      p: 2,
+      escudo: "escudos/PPP.png",
+    },
+    {
+      pos: 3,
+      equipo: "Club Cipolletti",
+      pj: 4,
+      g: 2,
+      p: 2,
+      escudo: "escudos/CAC.png",
+    },
+    {
+      pos: 5,
+      equipo: "Asociación Española de Neuquén",
+      pj: 4,
+      g: 1,
+      p: 3,
+      escudo: "escudos/AEN.png",
+    },
+    {
+      pos: 6,
+      equipo: "Club Atlético Regina",
+      pj: 4,
+      g: 0,
+      p: 4,
+      escudo: "escudos/CAR.png",
+    },
+  ],
+};
 
-fetch("data.json")
-  .then((response) => response.json())
-  .then((json) => {
-    data = json;
-    // Carga la tabla inicial y activa el primer botón
-    const primerBoton = document.querySelector(".buttons button");
-    cargarTabla("2da", primerBoton);
-  })
-  .catch((error) => console.error("Error cargando JSON:", error));
+function cargarTabla(categoria, btn) {
+  // Activar botón
+  document
+    .querySelectorAll(".buttons button")
+    .forEach((b) => b.classList.remove("active"));
+  btn.classList.add("active");
 
-function cargarTabla(categoria, activeButton) {
-  const tbody = document.getElementById("tabla-body");
-  tbody.innerHTML = "";
+  const tablaBody = document.getElementById("tabla-body");
+  tablaBody.innerHTML = "";
 
-  // 1. Elimina la clase 'active' de todos los botones
-  const allButtons = document.querySelectorAll(".buttons button");
-  allButtons.forEach((button) => {
-    button.classList.remove("active");
-  });
-
-  // 2. Agrega la clase 'active' al botón que fue presionado
-  if (activeButton) {
-    activeButton.classList.add("active");
-  }
-
-  // 3. Carga los datos de la tabla
   data[categoria].forEach((equipo) => {
-    const row = `
-      <tr>
-        <td class="pos">${equipo.pos}</td>
-        <td class="team">
-          <img src="${equipo.escudo}" alt="escudo ${equipo.equipo}" class="badge" />
-          ${equipo.equipo}
-        </td>
-        <td>${equipo.pj}</td>
-        <td>${equipo.g}</td>
-        <td>${equipo.p}</td>
-      </tr>
+    const tr = document.createElement("tr");
+
+    // Asignar clase según la posición
+    let clasePos = "";
+    if (equipo.pos === 1) clasePos = "gold";
+    else if (equipo.pos === 2) clasePos = "silver";
+    else if (equipo.pos === 3) clasePos = "bronze";
+
+    tr.innerHTML = `
+      <td class="pos ${clasePos}">${equipo.pos}</td>
+      <td class="team"><img src="${equipo.escudo}" class="badge" /> ${equipo.equipo}</td>
+      <td>${equipo.pj}</td>
+      <td>${equipo.g}</td>
+      <td>${equipo.p}</td>
     `;
-    tbody.innerHTML += row;
+
+    tablaBody.appendChild(tr);
   });
 }
+
+// Cargar por defecto la 2da al inicio
+window.onload = () => {
+  const primerBoton = document.querySelector(".buttons button");
+  cargarTabla("2da", primerBoton);
+};

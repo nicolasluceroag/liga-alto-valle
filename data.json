@@ -2,50 +2,52 @@
   "4ta": [
     {
       "pos": 1,
-      "equipo": "Club Atlético Regina",
-      "pj": 3,
-      "g": 2,
+      "equipo": "Club Cipolletti",
+      "pj": 4,
+      "g": 3,
       "p": 1,
-      "escudo": "escudos/CAR.png"
+      "escudo": "escudos/CAC.png"
     },
 
     {
       "pos": 1,
-      "equipo": "Club Cipolletti",
-      "pj": 3,
-      "g": 2,
-      "p": 1,
-      "escudo": "escudos/CAC.png"
-    },
-    {
-      "pos": 1,
-      "equipo": "Club Atlético Cinco Saltos",
-      "pj": 3,
-      "g": 2,
-      "p": 1,
-      "escudo": "escudos/CACS.png"
-    },
-    {
-      "pos": 1,
       "equipo": "Asociación Española de Neuquén",
-      "pj": 3,
-      "g": 2,
+      "pj": 4,
+      "g": 3,
       "p": 1,
       "escudo": "escudos/AEN.png"
     },
     {
+      "pos": 3,
+      "equipo": "Club Atlético Regina",
+      "pj": 4,
+      "g": 2,
+      "p": 2,
+      "escudo": "escudos/CAR.png"
+    },
+
+    {
+      "pos": 3,
+      "equipo": "Club Atlético Cinco Saltos",
+      "pj": 4,
+      "g": 2,
+      "p": 2,
+      "escudo": "escudos/CACS.png"
+    },
+
+    {
       "pos": 5,
       "equipo": "Club Pelota Paleta Plottier",
-      "pj": 3,
+      "pj": 4,
       "g": 1,
-      "p": 2,
+      "p": 3,
       "escudo": "escudos/PPP.png"
     },
     {
-      "pos": 6,
+      "pos": 5,
       "equipo": "Club Unión Alem Progresista",
-      "pj": 3,
-      "g": 0,
+      "pj": 4,
+      "g": 1,
       "p": 3,
       "escudo": "escudos/CUAP.png"
     }
@@ -55,52 +57,51 @@
     {
       "pos": 1,
       "equipo": "Club Unión Alem Progresista",
-      "pj": 3,
-      "g": 3,
+      "pj": 4,
+      "g": 4,
       "p": 0,
       "escudo": "escudos/CUAP.png"
     },
     {
-      "pos": 1,
+      "pos": 2,
       "equipo": "Club Pelota Paleta Plottier",
-      "pj": 3,
+      "pj": 4,
       "g": 3,
-      "p": 0,
+      "p": 1,
       "escudo": "escudos/PPP.png"
     },
 
     {
       "pos": 3,
       "equipo": "Club Atlético Cinco Saltos",
-      "pj": 3,
+      "pj": 4,
       "g": 2,
-      "p": 1,
+      "p": 2,
       "escudo": "escudos/CACS.png"
     },
     {
-      "pos": 4,
+      "pos": 3,
       "equipo": "Asociación Española de Neuquén",
-      "pj": 3,
-      "g": 1,
+      "pj": 4,
+      "g": 2,
       "p": 2,
       "escudo": "escudos/AEN.png"
     },
     {
       "pos": 5,
-      "equipo": "Club Atlético Regina",
-      "pj": 3,
-      "g": 0,
-      "p": 3,
-      "escudo": "escudos/CAR.png"
-    },
-
-    {
-      "pos": 5,
       "equipo": "Club Cipolletti",
-      "pj": 3,
-      "g": 0,
+      "pj": 4,
+      "g": 1,
       "p": 3,
       "escudo": "escudos/CAC.png"
+    },
+    {
+      "pos": 6,
+      "equipo": "Club Atlético Regina",
+      "pj": 4,
+      "g": 0,
+      "p": 0,
+      "escudo": "escudos/CAR.png"
     }
   ],
 
@@ -108,8 +109,8 @@
     {
       "pos": 1,
       "equipo": "Club Unión Alem Progresista",
-      "pj": 3,
-      "g": 3,
+      "pj": 4,
+      "g": 4,
       "p": 0,
       "escudo": "escudos/CUAP.png"
     },
@@ -117,43 +118,43 @@
     {
       "pos": 2,
       "equipo": "Club Atlético Cinco Saltos",
-      "pj": 3,
-      "g": 2,
+      "pj": 4,
+      "g": 3,
       "p": 1,
       "escudo": "escudos/CACS.png"
     },
 
     {
-      "pos": 2,
+      "pos": 3,
       "equipo": "Club Pelota Paleta Plottier",
-      "pj": 3,
+      "pj": 4,
       "g": 2,
-      "p": 1,
+      "p": 2,
       "escudo": "escudos/PPP.png"
     },
     {
-      "pos": 4,
+      "pos": 3,
       "equipo": "Club Cipolletti",
-      "pj": 3,
-      "g": 1,
+      "pj": 4,
+      "g": 2,
       "p": 2,
       "escudo": "escudos/CAC.png"
     },
 
     {
-      "pos": 4,
+      "pos": 5,
       "equipo": "Asociación Española de Neuquén",
-      "pj": 3,
+      "pj": 4,
       "g": 1,
-      "p": 2,
+      "p": 3,
       "escudo": "escudos/AEN.png"
     },
     {
       "pos": 6,
       "equipo": "Club Atlético Regina",
-      "pj": 3,
+      "pj": 4,
       "g": 0,
-      "p": 3,
+      "p": 4,
       "escudo": "escudos/CAR.png"
     }
   ]

@@ -9,13 +9,11 @@
   <body>
     <div class="container">
       <h1>Tabla de posiciones</h1>
-
       <div class="buttons">
         <button onclick="cargarTabla('2da', this)">2da Categoría</button>
         <button onclick="cargarTabla('3ra', this)">3ra Categoría</button>
         <button onclick="cargarTabla('4ta', this)">4ta Categoría</button>
       </div>
-
       <div class="card">
         <table>
           <thead>
@@ -30,8 +28,16 @@
           <tbody id="tabla-body"></tbody>
         </table>
       </div>
+      <div class="partidos-section">
+        <h2>Resultados</h2>
+        <select id="fechas-select"></select>
+        <div id="partidos-container"></div>
+      </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="posiciones.js"></script>
+    <script src="resultados.js"></script>
+
+    <script src="app.js"></script>
   </body>
 </html>
